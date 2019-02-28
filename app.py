@@ -9,8 +9,15 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
-	return 'Hello, World @ {0}'.format(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+def hello():
+	return 'Hello, World!'
+
+
+
+@app.route('/datetime')
+def getDatetime():
+	return 'Datetime is {0}'.format(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
 
 
 
